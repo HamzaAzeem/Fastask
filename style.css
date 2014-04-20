@@ -1,0 +1,11 @@
+.done_true {
+	text-decoration: line-through;
+}
+
+li span {
+	cursor: pointer;
+}
+
+body {
+	margin: 10px;
+}
