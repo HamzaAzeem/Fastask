@@ -26,7 +26,7 @@
 				<li
 					style="list-style-type:none;"
 					class="item"
-					ng-repeat="task in tasks"
+					ng-repeat="task in tasks track by $index"
 					ng-mouseenter="showDelete = true"
 					ng-mouseleave="showDelete = false"
 
