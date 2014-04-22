@@ -46,11 +46,7 @@ function TasksCtrl($scope) {
 		$scope.tasks[index].done = !($scope.tasks[index].done);
 		localStorage.setItem("todoTasks", JSON.stringify($scope.tasks));
 	};
-
-	$scope.isEmpty = function() {
-		if($scope.tasks == []) {return true};
-	}
-
+	
 	$scope.isNotChecked = function() {
 		for (var i = 0; i < $scope.tasks.length; i++) {
         	if($scope.tasks[i].done) {
