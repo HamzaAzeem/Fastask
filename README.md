@@ -6,6 +6,7 @@ A Todo list web app built with AngularJS framework. Styled with Bootstrap 3.
 Name inspired by the AngularJS framework's efficiency and speedy updates via two-way multibinding.
 
 ####Todo:
+------
 - Editable list items
 - UI construction
 - Draggable list items
