@@ -1,9 +1,11 @@
 Fastask
 =======
 
-A Todo list web app built with AngularJS framework.
+A Todo list web app built with AngularJS framework. Styled with Bootstrap 3.
 
-Name inspired by the AngularJS framework's speedy updates and efficiency.
+Name inspired by the AngularJS framework's efficiency and speedy updates via two-way multibinding.
 
-Todo:
-Format and make todo list for todo app in this README
+####Todo:
+- Editable list items
+- UI construction
+- Draggable list items
