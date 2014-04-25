@@ -32,7 +32,7 @@
 
 				>
 
-					<input type="checkbox" ng-click="setDone($index)">
+					<input type="checkbox" ng-click="setDone($index)" ng-checked="tasks[$index].done">
 					<span id="text" ng-class="{done_true:tasks[$index].done}">{{task.name}}</span>
 					<button class="btn btn-danger btn-xs" ng-click="delTask($index)" ng-show="showDelete">Delete</button>
 				</li>

@@ -21,18 +21,16 @@ function TasksCtrl($scope) {
 	};
 
 	$scope.delTask = function(index) {
-		delete $scope.tasks.splice(index, 1);
+		$scope.tasks.splice(index, 1);
 		localStorage.setItem("todoTasks", JSON.stringify($scope.tasks));
 	};
 
 	$scope.delChecked = function () {
-        var newTasks = [];
         for (var i = 0; i < $scope.tasks.length; i++) {
-        	if(!$scope.tasks[i].done) {
-        		newTasks.push($scope.tasks[i]);
+        	if($scope.tasks[i].done) {
+        		$scope.tasks.splice(i, 1);
         	}
         };
-        $scope.tasks = newTasks;
         localStorage.setItem("todoTasks", JSON.stringify($scope.tasks));
     };
 
