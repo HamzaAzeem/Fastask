@@ -7,5 +7,4 @@ Name inspired by the AngularJS framework's efficiency and speedy updates via two
 
 ####Todo:
 - Editable list items
-- UI construction
 - Draggable list items
