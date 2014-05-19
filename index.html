@@ -4,45 +4,51 @@
                                      initial-scale=1.0, 
                                      maximum-scale=1.0, 
                                      user-scalable=no">
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
-		<script src="main.js"></script>
 		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-	<header>
-		<h1>Fastask</h1>
-		<h4>Add. Complete. Repeat.</h2>
-	</header>
-
+	<div class="container-fluid">
+		<header>
+			<h1>Fastask</h1>
+			<h2>Add. Complete. Repeat.</h2>
+		</header>
 		<div ng-controller="TasksCtrl">
 
-			<form>
-				<input type="text" placeholder="I have to..." ng-model="inputTask" autofocus>
-				<button class="btn btn-primary btn-sm" ng-disabled="!inputTask" ng-click="addTask()">Add</button>
-			</form>
+			<div class="row-fluid">
+				<form>
+					<input class="input-lg" id="mainInput" placeholder="I have to..." ng-model="inputTask" autofocus>
+					<button id="btnAdd" class="btn btn-primary btn-sm" ng-disabled="!inputTask" ng-click="addTask()">Add</button>
+				</form>
+			</div>
 
-			<ul>
-				<li
-					style="list-style-type:none;"
-					class="item"
-					ng-repeat="task in tasks track by $index"
-					ng-mouseenter="showDelete = true"
-					ng-mouseleave="showDelete = false"
+			<div class="listContainer" ng-hide="tasks.length < 1">
+				<ul>
+					<li
+						style="list-style-type:none;"
+						class="item"
+						ng-repeat="task in tasks track by $index"
+						ng-mouseenter="showDelete = true"
+						ng-mouseleave="showDelete = false"
 
-				>
+					>
 
-					<input type="checkbox" ng-click="setDone($index)" ng-checked="tasks[$index].done">
-					<span id="text" ng-class="{done_true:tasks[$index].done}">{{task.name}}</span>
-					<button class="btn btn-danger btn-xs" ng-click="delTask($index)" ng-show="showDelete">Delete</button>
-				</li>
-			</ul>
+						<input type="checkbox" ng-click="setDone($index)" ng-checked="tasks[$index].done">
+						<span id="text" ng-class="{done_true:tasks[$index].done}">{{task.name}}</span>
+						<button class="btn btn-danger btn-xs delSmall" ng-click="delTask($index)" ng-show="showDelete">Delete</button>
+					</li>
+				</ul>
+			</div>
 
-			<button class="btn btn-default" ng-disabled="tasks.length < 1 || isNotChecked()" ng-click="delChecked()">Delete Completed Tasks</button>
-			<button class="btn btn-danger" ng-disabled="tasks.length < 1" ng-click="delAll()">Delete All Tasks</button>
-			
- 			<br/><br/>
-			{{tasks}}
+
+			<div id="buttonHolder">
+				<button class="btn btn-default del" ng-disabled="tasks.length < 1 || isNotChecked()" ng-click="delChecked()">Delete Completed Tasks</button>
+				<button class="btn btn-danger del" ng-disabled="tasks.length < 1" ng-click="delAll()">Delete All Tasks</button>
+			</div>
 		</div>
+	</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+		<script src="main.js"></script>
 	</body>
 </html>

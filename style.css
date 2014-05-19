@@ -1,3 +1,76 @@
+@import url(http://fonts.googleapis.com/css?family=Rancho);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400);
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 10px;
+	background: url(bg.png);
+}
+
+h1, h2 {
+	text-align: center;
+	color: rgba(255,255,255,1);
+	text-shadow: 2px 2px 2px #333;
+}
+
+h1 {
+	font-size: 5em;
+	font-family: 'Rancho', sans-serif;
+}
+
+h2 {
+	font-size: 1.5em;
+	font-family: 'Raleway', sans-serif;
+}
+
+form {
+	text-align: center;
+}
+
+li {
+	min-width: 100%;
+	background: rgba(245,245,220,0.9);
+	margin-bottom: 5px;
+	padding: 5px;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+#mainInput {
+	margin: 50px auto 10px;
+	width: 100%;
+	padding: 10px;
+	font-size: 2em;
+}
+
+#btnAdd {
+	min-height: 60px;
+	width: 100%;
+	margin-bottom: 15px;
+	font-size: 25px;
+}
+
+.listContainer {
+	width: 100%;
+	background-color: rgba(102,51,0,0.9);
+	padding: 15px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.del {
+	width: 100%;
+}
+
+.delSmall {
+	float: right;
+	margin-right: 10px;
+}
+
 .done_true {
 	text-decoration: line-through;
 }
@@ -6,6 +79,42 @@ li span {
 	cursor: pointer;
 }
 
-body {
-	margin: 10px;
+@media screen and (min-width: 480px) {
+	h1 {
+		font-size: 7em;
+	}
+
+	h2 {
+		font-size: 2em;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	h1 {
+		font-size: 10em;
+	}
+
+	h2 {
+		font-size: 3em;
+	}
+
+	#buttonHolder {
+		margin: 0 auto;
+		width: 600px;
+	}
+
+	#mainInput {
+		width: 600px;
+	}
+
+	#btnAdd {
+		width: 100px;
+		margin-left: 15px;
+	}
+	
+	.listContainer {
+		margin: 50px auto;
+		width: 600px;
+	}
+
 }
